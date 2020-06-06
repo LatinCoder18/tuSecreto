@@ -1,0 +1,16 @@
+{
+  "name": "tusecreto",
+  "version": "1.0.0",
+  "description": "\"Bot de secretos de tusecreto.io\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adonys Valdes Arencibia",
+  "license": "MIT",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "irc": "^0.5.2",
+    "node-irc": "0.0.5"
+  }
+}
