@@ -25,7 +25,7 @@ client.addListener('error', function (message) {
 });
 
 var job = new CronJob(
-    '0 */1 * * * *',
+    '0 */2 * * * *',
     function () {
         decirSecreto();
     },
@@ -45,8 +45,19 @@ var jobLobby = new CronJob(
     'America/Havana'
 );
 jobLobby.start();
+var jobAPP = new CronJob(
+    '0 */50 * * * *',
+    function () {
+        client.say('#lobby',' Tenemos nuestra propia aplicación  en la PlayStore puede descargarla del siguiente link y valorarnos de 5 estrellas para que mas usuarios la vean. https://play.google.com/store/apps/details?id=org.segured.irc  o de lo contrario puede buscarla por el nombre de Segured-Chat en la Play Store');
+    },
+    null,
+    false,
+    'America/Havana'
+);
+jobAPP.start();
+
 function decirSecreto() {
-    fs.readFile('secretos.txt', 'utf8', function (err, data) {
+    fs.readFile('secreto.txt', 'utf8', function (err, data) {
         if (err) {
             return console.log(err);
         }
