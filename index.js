@@ -29,7 +29,7 @@ client.addListener('error', function (message) {
 });
 
 var job = new CronJob(
-    '0 */2 * * * *',
+    '0 */10 * * * *',
     function () {
         decirSecreto();
     },
@@ -60,17 +60,16 @@ var jobAPP = new CronJob(
 );
 jobAPP.start();
 
-var job = new CronJob(
-    '0 */45 * * * *',
+var jobTelegramAPP = new CronJob(
+    '0 0 */3 * * *',
     function () {
-        console.log('Hola');
-
+        bot.sendPhoto('-1001215282688',"chat.png",{caption : 'Tenemos nuestra propia aplicación  en la PlayStore puede descargarla del siguiente link y valorarnos de 5 estrellas para que mas usuarios la vean. https://play.google.com/store/apps/details?id=org.segured.irc  o de lo contrario puede buscarla por el nombre de Segured-Chat en la Play Store'} );
     },
     null,
     false,
     'America/Havana'
 );
-job.start();
+jobTelegramAPP.start();
 
     
  
