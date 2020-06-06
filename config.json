@@ -1,0 +1,23 @@
+{
+    "bot": {
+        "name": "[TuSecreto]",
+        "username": "TuSecreto",
+        "realname": "Todas las cosas en su lugar",
+        "server": "irc.segured.org",
+        "port": "443",
+        "botmaster": "LukeSkywalker",
+        "password": "******",
+        "channels": [
+            "#secretos"
+        ],
+        "ignore": [
+            "none"
+        ]
+    },
+    "database": {
+        "user": "root",
+        "password": "",
+        "host": "localhost",
+        "database": "irc_bot"
+    }
+}
